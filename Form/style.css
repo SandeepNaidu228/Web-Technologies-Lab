@@ -14,7 +14,7 @@ body {
     color: #f0f0f0;
 }
 
-.login-container {
+.form-container {
     background-color: #1e1e1e;
     padding: 40px 30px;
     border-radius: 20px;
@@ -41,9 +41,14 @@ label {
     font-weight: 500;
 }
 
+.required {
+    color: #ff6b6b;
+}
+
 input[type="text"],
 input[type="tel"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%;
     padding: 12px;
@@ -57,12 +62,17 @@ textarea {
     resize: none;
 }
 
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border-color: #29567b;
     outline: none;
+}
+
+input.invalid, textarea.invalid {
+    border-color: #ff6b6b;
+}
+
+input.valid, textarea.valid {
+    border-color: #4caf50;
 }
 
 button[type="submit"] {
@@ -76,21 +86,36 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover:enabled {
     background-color: #29567b;
     transform: scale(1.03);
+}
+
+button[type="submit"]:disabled {
+    background-color: #444a5a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.95em;
+    min-height: 18px;
+    margin-bottom: 2px;
 }
 
 #form-message {
     margin-top: 18px;
     color: #4caf50;
     min-height: 22px;
+    text-align: center;
 }
 
 @media (max-width: 500px) {
-    .login-container {
+    .form-container {
         padding: 25px 10px;
     }
     h2 {
