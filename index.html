@@ -1,53 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P. Diddy</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Hub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      flex-direction: column;
+      color: #f0f0f0;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      transition: transform 0.3s ease;
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h1, h2 {
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #3a6ea5;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #29567b;
+      transform: scale(1.05);
+    }
+
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .photo-card {
+      background-color: #2a2a2a;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .photo-card p {
+      padding: 10px;
+      font-weight: 500;
+      color: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      .links a {
+        font-size: 1rem;
+        padding: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home" class="logo">Portfolio.</a>
-        <ul class="list-items">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-    <div class="container">
-        <div id="home">
-            <div class="home-content">
-                <h4>Hello,</h4>
-                <h1>I'm P. Diddy</h1>
-                <h2>Web Developer</h2>
-                <!-- <a href="contact">Hire me</a> -->
-                <button>Hire me!</button>
-            </div>
-            <div class="photo">
-                <img src="https://cdn.rt.emap.com/wp-content/uploads/sites/2/2010/10/07130108/PUFF_DADY_27_09_10__SHOT_1_0033-1.jpg">
-            </div>
-        </div>
-        <div id="about">
-            <p>
-                Yo, I'm <strong>P. Diddy</strong> — but you can call me Puff, Diddy, or the guy who changes names more than Wi-Fi passwords. I invented the remix, made dancing in shiny suits cool, and once yelled “Take that, take that” into a mic and made millions.CEO by day, meme by night, and professionally known for walking in slow motion while explosions go off behind me (in my head).💼 Rapper. 💰 Mogul. 🕺 Bad Boy for life.Swipe up to vibe. (Wait... this isn’t Instagram?)Anyway, welcome to my portfolio. Let’s make hits—or websites. Your call.
-            </p>
-        </div>
-        
-        <div id="skills">
 
-        </div>
-        <div id="contact">
-            <h3>Contact me</h3>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Email">
-            <textarea rows="5" placeholder="Message"></textarea>
-            <button>submit</button>
-        </div>
+  <!-- Main Project Links Card -->
+  <div class="card">
+    <h1>Welcome to Sandeep's Web Technologies Lab Projects</h1>
+    <div class="links">
+      <a href="Portfolio/index.html">🚀 Assignment 1: Portfolio</a>
+      <a href="Weather-App/index.html">☁️ Assignment 2: Weather App</a>
     </div>
-    <div class="footer">
-        <p>copyright@ diddy 2025</p>
+  </div>
+
+  <!-- Assignment Photos Section -->
+  <div class="card">
+    <h2>📸 Assignment Photos</h2>
+    <div class="photo-grid">
+      <!-- Example image cards (replace with your own) -->
+      <div class="photo-card">
+        <img src="images/assignment1.jpg" alt="Assignment 1 Screenshot">
+        <p>Assignment 1</p>
+      </div>
+      <div class="photo-card">
+        <img src="images/assignment2.jpg" alt="Assignment 2 Screenshot">
+        <p>Assignment 2</p>
+      </div>
     </div>
+  </div>
+
 </body>
 </html>
