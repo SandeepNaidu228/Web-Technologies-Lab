@@ -44,7 +44,7 @@ const fields = {
     input: document.getElementById('message'),
     error: document.getElementById('message-error'),
     validate: value => {
-      if (value.length > 500) return 'Message cannot exceed 500 characters.';
+      if (value.length > 5) return 'Message cannot exceed 500 characters.';
       return '';
     }
   }
